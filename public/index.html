@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Reportes - Almacén PF</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <h1>Almacén PF <span>• Panel de Reportes</span></h1>
+        </div>
+    </header>
+
+    <main class="app-container">
+        <section class="form-section">
+            <div class="card">
+                <h2>Nuevo Reporte</h2>
+                <form id="report-form">
+                    <div class="form-group">
+                        <label for="report-title">Título del Reporte</label>
+                        <input type="text" id="report-title" required placeholder="Ej. Incidencia de Inventario">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="report-category">Categoría</label>
+                            <select id="report-category" required>
+                                <option value="">Seleccione...</option>
+                                <option value="Inventario">Inventario</option>
+                                <option value="Personal">Personal</option>
+                                <option value="Infraestructura">Infraestructura</option>
+                                <option value="Despacho">Despacho</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="report-date">Fecha</label>
+                            <input type="date" id="report-date" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="report-description">Descripción Detallada</label>
+                        <textarea id="report-description" rows="5" required placeholder="Detalles..."></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Alojar Reporte</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="history-section">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Historial de Reportes</h2>
+                    <span id="report-count" class="badge">0 reportes</span>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Buscar reporte...">
+                </div>
+                <div class="table-responsive">
+                    <table class="report-table">
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Fecha</th>
+                                <th>Título</th>
+                                <th>Categoría</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reports-tbody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
