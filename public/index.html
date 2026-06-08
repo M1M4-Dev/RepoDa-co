@@ -57,17 +57,19 @@
                 <div class="search-box">
                     <input type="text" id="search-input" placeholder="Buscar reporte...">
                 </div>
-                <div class="table-responsive">
-                    <table class="report-table">
-                        <thead>
-                            <tr>
-                                <th>Código</th>
-                                <th>Fecha</th>
-                                <th>Título</th>
-                                <th>Categoría</th>
-                                <th>Acción</th>
-                            </tr>
-                        </thead>
+                <div class="form-group">
+    <label for="report-images">Evidencia Fotográfica (Opcional - Máximo 5)</label>
+    <input type="file" id="report-images" name="images" accept="image/*" multiple>
+</div>
+
+<thead>
+    <tr>
+        <th>Código</th>
+        <th>Fecha</th>
+        <th>Título / Categoría</th>
+        <th>Evidencia Visual</th> <th>Acciones</th>
+    </tr>
+</thead>
                         <tbody id="reports-tbody"></tbody>
                     </table>
                 </div>
