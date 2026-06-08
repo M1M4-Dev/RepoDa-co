@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // El Token es inyectado automáticamente por Vercel en producción
-const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
+const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN="vercel_blob_rw_4edGRTCz6Q8i0uin_GyIAUfYeJQS0CIueE5A6KJA9MYc0Bs";
 
 // Endpoint para guardar un reporte en Vercel Blob
 app.post('/api/reportes', async (req, res) => {
