@@ -1,0 +1,6 @@
+{
+  "name": "Almacén PF - Sistema de Gestión de Almacén e Inventario",
+  "description": "Reinterpretación moderna y profesional de Almacén PF: control de inventario en tiempo real, kárdex valorizado, gestión de entradas/salidas, punto de despacho y topología de almacén.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
